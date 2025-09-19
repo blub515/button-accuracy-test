@@ -38,6 +38,7 @@
 
   <div id="timer" class="fs-4 mb-2">Timer: 0</div>
   <div id="accuracy" class="fs-5 mb-3">Accuracy: -</div>
+  <div id="modeDisplay" class="fs-5 mb-3 text-info">Mode: -</div>
 
   <div id="gameArea" class="bg-light">
     <button id="targetBtn" class="btn btn-primary d-none" onclick="registerClick()">Click Me!</button>
@@ -67,6 +68,7 @@
         targetBtn.style.height = "50px";
       }
 
+      document.getElementById('modeDisplay').textContent = "Mode: " + (mode === 'big' ? "Big Button Test" : "Small Button Test");
       targetBtn.classList.remove("d-none");
       gameActive = true;
       moveButton();
